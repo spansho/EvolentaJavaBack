@@ -5,12 +5,14 @@ public class Main {
         System.out.println("Введите числа a b и c");
         Scanner scanner = new Scanner(System.in);
         int a,b,c;
+        int numberOfDivisons=0;
         a= scanner.nextInt();
         b=scanner.nextInt();
         c=scanner.nextInt();
-        if(a%5==0) {System.out.println("Число a делится на 5");System.out.println(a);System.out.println();}
-        if(b%5==0) {System.out.println("Число b делится на 5");System.out.println(b);System.out.println();}
-        if(c%5==0) {System.out.println("Число c делится на 5");System.out.println(c);System.out.println();}
+        if(a%5==0) {numberOfDivisons++;System.out.println("Число a делится на 5");System.out.println(a);System.out.println();}
+        if(b%5==0) {numberOfDivisons++;System.out.println("Число b делится на 5");System.out.println(b);System.out.println();}
+        if(c%5==0) {numberOfDivisons++;System.out.println("Число c делится на 5");System.out.println(c);System.out.println();}
+        if(numberOfDivisons++==0)System.out.println("нет значений, кратных 5");
         System.out.println("Результат целочисленного деления a на b");
         System.out.println(a/b);
         System.out.println();
