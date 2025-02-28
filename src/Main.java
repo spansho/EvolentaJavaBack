@@ -17,7 +17,9 @@ public class Main
         }
         System.out.println();
         mapOfOccurrences.forEach((key,value) ->{
-            System.out.println(String.format("Число %d встречает %d раз",key,value));
+            if (value > 1) {
+                System.out.println(String.format("Число %d встречается %d раз", key, value));
+            }
         });
     }
 }
