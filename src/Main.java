@@ -31,10 +31,10 @@ public class Main {
         System.out.println("Остаток от деления b на c ");
         System.out.println(b%c);
         System.out.println();
-        System.out.println("Наибольшее среди a и b");
+        System.out.println("Наименьшее среди a и b");
         System.out.println(Math.min(a,b));
         System.out.println();
-        System.out.println("Наименьшее среди b и c");
+        System.out.println("Наибольшее среди b и c");
         System.out.println(Math.max(b,c));
     }
 }
