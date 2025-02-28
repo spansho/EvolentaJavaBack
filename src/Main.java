@@ -12,7 +12,7 @@ public class Main {
         if(a%5==0) {numberOfDivisons++;System.out.println("Число a делится на 5");System.out.println(a);System.out.println();}
         if(b%5==0) {numberOfDivisons++;System.out.println("Число b делится на 5");System.out.println(b);System.out.println();}
         if(c%5==0) {numberOfDivisons++;System.out.println("Число c делится на 5");System.out.println(c);System.out.println();}
-        if(numberOfDivisons++==0)System.out.println("нет значений, кратных 5");
+        if(numberOfDivisons==0)System.out.println("нет значений, кратных 5");
         System.out.println("Результат целочисленного деления a на b");
         System.out.println(a/b);
         System.out.println();
@@ -26,7 +26,7 @@ public class Main {
         System.out.println(Math.floor((double)a/b));
         System.out.println();
         System.out.println("Результат математического округления  деления a на b ");
-        System.out.println(Math.round(a/b));
+        System.out.println(Math.round((double)a/b));
         System.out.println();
         System.out.println("Остаток от деления b на c ");
         System.out.println(b%c);
