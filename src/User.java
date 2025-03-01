@@ -16,7 +16,7 @@ public class User {
         setAge(agez);
     }
     public String toString() {
-        String newString=name+" возраст"+age;
+        String newString=name+" возраст "+age+" лет";
         return newString;
     }
 

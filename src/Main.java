@@ -18,8 +18,10 @@ public class Main {
         age=scanner.nextInt();
         User user2=new User(name,age);
         System.out.println(" ");
-        System.out.println(user.toString());
-        System.out.println(user2.toString());
+        if(user.getAge()<user2.getAge())
+            System.out.println(user.toString());
+        else if(user.getAge()>user2.getAge()) System.out.println(user2.toString());
+        else System.out.println("Возрасты равны");
 
 
     }
