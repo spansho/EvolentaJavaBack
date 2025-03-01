@@ -1,4 +1,6 @@
-public class User {
+import java.util.Comparator;
+
+public class User  {
     private String name;
     private Integer age;
 
@@ -35,5 +37,4 @@ public class User {
     }
 
     public void setAge(Integer agez){age=agez;};
-
 }
