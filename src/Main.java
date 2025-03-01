@@ -1,33 +1,50 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         String name;
-       int age;
-        ArrayList<User> listOfUsers=new ArrayList<User>();
-       for(int i =0;i<5;i++) {
-           System.out.println("Введите имя");
-           name = scanner.nextLine();
-           System.out.println("Введите возраст");
-           age = scanner.nextInt();
-           listOfUsers.add(new User(name,age));
-           scanner.nextLine();
-       }
-
-
-        Collections.sort(listOfUsers, new Comparator<User>() {
-            public int compare(User a, User b) {
-                return a.getAge().compareTo(b.getAge());
-            }
-        });
+        int age;
+        HashMap<Integer,ArrayList<User>>listOfUsers=new HashMap<Integer,ArrayList<User>>();
         for(int i =0;i<5;i++) {
-            System.out.println(listOfUsers.get(i).toString());
-            System.out.println();
+            System.out.println("Введите имя");
+            name = scanner.nextLine();
+            System.out.println("Введите возраст");
+            age = scanner.nextInt();
+            if(listOfUsers.containsKey(age))
+            {
+                var lists=listOfUsers.get(age);
+                lists.add(new User(name,age));
+                listOfUsers.put(age,lists);
+            }
+            else
+            {
+                var list= new ArrayList<User>();
+                list.add(new User(name,age));
+                listOfUsers.put(age,list);
+            }
+            scanner.nextLine();
+        }
 
+        var keySetOfHashMap=listOfUsers.keySet();
+        System.out.println("Введиет необходимый возраст");
+        int neobhodimVozrst;
+        neobhodimVozrst=scanner.nextInt();
+        for(Integer key: listOfUsers.keySet())
+        {
+            if(!listOfUsers.containsKey(neobhodimVozrst))
+            {
+                System.out.println("Пользователь с возрастом "+neobhodimVozrst+" не найден" );
+                break;
+            }
+            if(key==neobhodimVozrst)
+            {
+                var list=listOfUsers.get(key);
+                for(int i =0;i<list.size();i++)
+                {
+                    System.out.println(list.get(i).toString());
+                }
+            }
         }
 
     }
