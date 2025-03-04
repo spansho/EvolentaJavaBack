@@ -1,4 +1,4 @@
-package main.java;
+package com.example;
 
 public interface Operation {
     double getResult(double a, double b);

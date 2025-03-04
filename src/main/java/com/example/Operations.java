@@ -1,5 +1,5 @@
-package main.java;
-import  main.java.Operation;
+package com.example;
+
 public class Operations {
 
     public static class Subtractor implements Operation {

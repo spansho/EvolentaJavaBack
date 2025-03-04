@@ -1,1 +1,8 @@
-Main.class
+com\example\Operations$Subtractor.class
+com\example\Main.class
+com\example\Operations$Divided.class
+com\example\Operations$Adder.class
+com\example\Calculator.class
+com\example\Operations$Multiplie.class
+com\example\Operation.class
+com\example\Operations.class
